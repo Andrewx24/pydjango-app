@@ -14,3 +14,10 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "web_project.settings")
 
 application = get_wsgi_application()
+
+# api/wsgi.py
+app = get_wsgi_application()
+
+# api/settings.py
+WSGI_APPLICATION = 'api.wsgi.app'
+
