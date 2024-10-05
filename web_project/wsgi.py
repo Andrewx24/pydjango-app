@@ -1,3 +1,5 @@
+# web_project/wsgi.py
+
 """
 WSGI config for web_project project.
 
@@ -15,9 +17,9 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "web_project.settings")
 
 application = get_wsgi_application()
 
-# api/wsgi.py
-app = get_wsgi_application()
+# The following line can be removed if you don't have a separate API application
+# app = get_wsgi_application()
 
-# api/settings.py
-WSGI_APPLICATION = 'api.wsgi.app'
-
+# web_project/settings.py
+# This line should be in your main settings file, not in the WSGI file
+WSGI_APPLICATION = 'web_project.wsgi.application'

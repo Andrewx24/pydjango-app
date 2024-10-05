@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-tku-$vht!(3)m5ictjywrs)3f$6*!w)mc&%)_%-%-vg+n^+a!0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -50,8 +50,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-# api/settings.py
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+
 
 ROOT_URLCONF = "web_project.urls"
 
