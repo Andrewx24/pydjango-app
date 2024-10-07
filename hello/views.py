@@ -4,7 +4,11 @@ import requests
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from bs4 import BeautifulSoup
+from django.views.generic import TemplateView
 
+class ReactAppView(TemplateView):
+    template_name = 'index.html'
+    
 from .models import a
 def home(request):
     
