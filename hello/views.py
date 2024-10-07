@@ -32,7 +32,8 @@ def scrape_and_post(request):
             # This is an example - adjust according to the actual structure of the page
             data = {
                 'title': soup.title.string if soup.title else '',
-                # Add more fields as needed
+                 'heading': soup.h1.string if soup.h1 else '',
+                'paragraphs': [p.string for p in soup.find_all('p')],
             }
             
             # Step 2: Post the data
